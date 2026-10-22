@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lyceum of Southern Luzon, Inc. | Balayan, Batangas</title>
+<meta name="description" content="Discover Lyceum of Southern Luzon, Inc. in Balayan, Batangas. Explore college programs, Senior High School offerings, school activities, and enrollment inquiries.">
+<meta name="theme-color" content="#0a1d4a">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Outfit:wght@400;500;600;700&display=swap');
+:root{
+  --navy:#0a1d4a;--navy-d:#050f2b;--blue:#2457d6;--gold:#f0b429;--gold-d:#b98308;--cream:#fbf8f0;--paper:#f4f1e8;
+  --ink:#16213a;--muted:#5a657d;--line:#e1ddd0;
+  --serif:"Fraunces",Georgia,serif;--sans:"Outfit",Arial,sans-serif;
+  --r:22px;--shadow:0 24px 50px -24px rgba(5,15,43,.45);--ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:var(--navy-d)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.container{width:min(1220px,calc(100% - 48px));margin:auto}
+.section{position:relative;padding:110px 0}
+h1,h2,h3{line-height:1.12}
+.tag{display:inline-block;padding:6px 16px;border-radius:50px;background:rgba(240,180,41,.18);color:var(--gold-d);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
+.dark .tag{background:rgba(240,180,41,.15);color:var(--gold)}
+.title{font:800 clamp(2.2rem,4.4vw,3.6rem)/1.05 var(--serif);color:var(--navy);letter-spacing:-.02em}
+.dark .title{color:#fff}
+.desc{color:var(--muted);font-size:1.05rem;max-width:58ch}
+.dark .desc{color:#c9d5f0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:50px;margin-bottom:56px}
+.head .desc{flex:0 1 480px}
+.head.center{flex-direction:column;align-items:center;text-align:center;gap:16px}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:13px 30px;border:2px solid transparent;border-radius:60px;font-weight:600;font-size:.97rem;cursor:pointer;transition:transform .3s var(--ease),background .25s,color .25s,box-shadow .3s}
+.btn:hover{transform:translateY(-4px)}
+.btn-gold{background:var(--gold);color:var(--navy-d);box-shadow:0 14px 30px -12px rgba(240,180,41,.85)}
+.btn-gold:hover{background:#ffc94d}
+.btn-line{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-line:hover{background:#fff;color:var(--navy)}
+.btn-blue{background:var(--navy);color:#fff;box-shadow:0 14px 30px -14px rgba(10,29,74,.9)}
+.btn-blue:hover{background:var(--blue)}
+.link{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-weight:600;font-size:.95rem}
+.link:hover{gap:14px}
+.progress{position:fixed;top:0;left:0;z-index:300;height:4px;width:0;background:var(--gold)}
+
+/* top + header */
+.topbar{background:var(--navy-d);color:#c4d0ec;font-size:.82rem}
+.topbar-inner{min-height:40px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.topbar a{color:var(--gold);font-weight:600}.topbar a:hover{text-decoration:underline}
+.header{position:sticky;top:0;z-index:100;background:rgba(251,248,240,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:box-shadow .3s}
+.header.scrolled{box-shadow:0 10px 30px -14px rgba(5,15,43,.4)}
+.navbar{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px;transition:min-height .3s}
+.header.scrolled .navbar{min-height:68px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.brand img{width:56px;height:56px;object-fit:contain}
+.brand strong{display:block;font:800 1.02rem/1.2 var(--serif);color:var(--navy)}
+.brand span{display:block;font:italic 600 .82rem var(--serif);color:var(--gold-d)}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;padding:6px;border:1px solid var(--line);border-radius:60px;background:#fff}
+.nav-links a{display:block;padding:9px 15px;border-radius:50px;font-size:.86rem;font-weight:500;color:#37435f;transition:background .25s,color .25s}
+.nav-links a:hover{background:var(--paper);color:var(--navy)}
+.nav-links a.active{background:var(--navy);color:#fff}
+.nav-links .nav-cta{background:var(--gold);color:var(--navy-d);font-weight:700}
+.nav-links .nav-cta:hover{background:#ffc94d}
+.menu-toggle{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--navy);font-size:1.3rem;cursor:pointer}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(700px 500px at 85% 20%,rgba(36,87,214,.55),transparent 65%),radial-gradient(600px 400px at 0 100%,rgba(240,180,41,.22),transparent 60%),var(--navy-d)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(255,255,255,.08) 1px,transparent 1.6px) 0 0/30px 30px;-webkit-mask-image:linear-gradient(90deg,#000,transparent 80%);mask-image:linear-gradient(90deg,#000,transparent 80%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;padding:90px 0 150px}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:26px;padding:8px 18px 8px 12px;border:1px solid rgba(255,255,255,.22);border-radius:50px;background:rgba(255,255,255,.07);color:#ffe7a6;font-size:.78rem;font-weight:600;letter-spacing:.1em}
+.hero-badge::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(240,180,41,.25)}
+.hero h1{font:800 clamp(3rem,6.4vw,5.6rem)/.98 var(--serif);letter-spacing:-.035em;margin-bottom:26px}
+.hero h1 em{display:block;font-style:italic;font-weight:600;color:var(--gold)}
+.hero-description{max-width:52ch;color:#cdd9f3;font-size:1.12rem;margin-bottom:36px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-note{margin-top:38px;font:italic 600 1.15rem var(--serif);color:#ffe7a6}
+.hero-in>*{animation:rise .9s var(--ease) both}
+.hero-in>*:nth-child(2){animation-delay:.1s}.hero-in>*:nth-child(3){animation-delay:.2s}.hero-in>*:nth-child(4){animation-delay:.3s}.hero-in>*:nth-child(5){animation-delay:.4s}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.collage{position:relative;height:540px}
+.collage figure{position:absolute;overflow:hidden;margin:0;border:6px solid rgba(255,255,255,.95);border-radius:var(--r);background:var(--navy);box-shadow:0 30px 60px -20px rgba(0,0,0,.65)}
+.collage img{width:100%;height:100%;object-fit:cover}
+.c1{inset:0 22% 18% 0;transform:rotate(-2deg);animation:float 7s ease-in-out infinite}
+.c2{right:0;top:12%;width:46%;height:42%;transform:rotate(4deg);animation:float 8s ease-in-out -2s infinite}
+.c3{right:6%;bottom:0;width:50%;height:38%;transform:rotate(-3deg);animation:float 9s ease-in-out -4s infinite}
+@keyframes float{50%{translate:0 -14px}}
+.collage .seal{position:absolute;left:-18px;bottom:30px;z-index:3;display:flex;align-items:center;gap:12px;padding:14px 22px 14px 14px;border-radius:60px;background:#fff;color:var(--navy);font:700 1rem var(--serif);box-shadow:var(--shadow)}
+.seal b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--gold);font-size:1.3rem}
+
+/* marquee */
+.marquee{position:relative;z-index:2;overflow:hidden;background:var(--gold);color:var(--navy-d);transform:rotate(-1.2deg);margin:-40px -20px 0;box-shadow:0 20px 40px -20px rgba(5,15,43,.6)}
+.marquee-track{display:flex;width:max-content;animation:scroll 32s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span{padding:16px 28px;font:800 1.25rem var(--serif);white-space:nowrap}
+.marquee span::after{content:"✦";margin-left:56px;font-size:.9rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* quick links */
+.quick-section{padding:70px 0 0}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.quick-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:14px;padding:28px 26px;border:1px solid var(--line);border-radius:var(--r);background:#fff;transition:transform .4s var(--ease),box-shadow .4s,background .3s,color .3s}
+.quick-card:hover{transform:translateY(-8px);background:var(--navy);box-shadow:var(--shadow)}
+.quick-icon{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;background:var(--paper);color:var(--navy);font-size:1.3rem;font-weight:700;transition:background .3s,transform .4s var(--ease)}
+.quick-card:hover .quick-icon{background:var(--gold);transform:rotate(-10deg)}
+.quick-card h3{font:800 1.18rem var(--serif);color:var(--navy);transition:color .3s}
+.quick-card p{color:var(--muted);font-size:.9rem;line-height:1.5;transition:color .3s}
+.quick-card:hover h3{color:#fff}.quick-card:hover p{color:#c9d5f0}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.about-photo{position:relative;height:560px}
+.about-photo>img{position:absolute;inset:0 18% 14% 0;width:82%;height:86%;object-fit:cover;border-radius:var(--r);box-shadow:var(--shadow);background:var(--navy)}
+.about-photo .inset{position:absolute;right:0;bottom:0;width:48%;height:46%;object-fit:cover;border:8px solid var(--cream);border-radius:var(--r);background:var(--navy-d);box-shadow:var(--shadow)}
+.photo-caption{position:absolute;left:22px;bottom:calc(14% + 22px);z-index:2;padding:16px 22px;border-radius:16px;background:rgba(5,15,43,.82);backdrop-filter:blur(8px);color:#fff}
+.photo-caption span{color:var(--gold);font-size:.7rem;font-weight:700;letter-spacing:.14em}
+.photo-caption h3{font:800 1.3rem var(--serif);margin-top:2px}
+.about-copy p{color:var(--muted);margin:18px 0 0;font-size:1.05rem}
+.about-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:34px 0}
+.about-point{display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:16px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:.95rem;color:var(--navy);transition:transform .3s var(--ease),border-color .3s}
+.about-point:hover{transform:translateY(-4px);border-color:var(--gold)}
+.about-point span{display:grid;place-items:center;flex:none;width:26px;height:26px;border-radius:50%;background:var(--gold);font-size:.78rem;font-weight:800}
+
+/* programs bento */
+.programs{background:var(--paper)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.bcard{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:360px;padding:30px;border:1px solid var(--line);border-radius:26px;background:#fff;transition:transform .45s var(--ease),background .35s,box-shadow .4s}
+.bcard::before{content:attr(data-code);position:absolute;top:-6px;right:-8px;font:800 5.2rem/1 var(--serif);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px rgba(10,29,74,.14);transition:-webkit-text-stroke-color .35s,transform .5s var(--ease)}
+.bcard:hover{transform:translateY(-10px);background:var(--navy);box-shadow:var(--shadow)}
+.bcard:hover::before{-webkit-text-stroke-color:rgba(240,180,41,.7);transform:translateX(-8px)}
+.program-code{align-self:flex-start;margin-bottom:auto;padding:8px 16px;border-radius:50px;background:var(--navy);color:var(--gold);font-weight:700;letter-spacing:.06em;font-size:.85rem;transition:background .3s,color .3s}
+.bcard:hover .program-code{background:var(--gold);color:var(--navy-d)}
+.bcard h3{margin:28px 0 10px;font:800 1.7rem var(--serif);color:var(--navy);transition:color .3s}
+.bcard p{color:var(--muted);font-size:.92rem;margin-bottom:18px;transition:color .3s}
+.bcard:hover h3{color:#fff}.bcard:hover p{color:#c9d5f0}.bcard:hover .link{color:var(--gold)}
+.bcard.enroll{grid-column:1/-1;min-height:0;flex-direction:row;align-items:center;gap:40px;background:var(--navy);border-color:var(--navy)}
+.bcard.enroll::before{display:none}
+.bcard.enroll .program-code{margin:0;background:var(--gold);color:var(--navy-d)}
+.bcard.enroll h3{margin:0 0 6px;color:#fff}
+.bcard.enroll p{margin:0;color:#c9d5f0}
+.bcard.enroll div{flex:1}
+.bcard.enroll .link{color:var(--gold);white-space:nowrap}
+.bcard.enroll:hover{background:var(--navy-d)}
+.program-note{display:flex;gap:14px;margin-top:30px;padding:20px 26px;border-radius:18px;background:#fff3cf;border:1px solid #f1dc9a;color:#6a5514;font-size:.92rem}
+
+/* secondary education */
+.dark{color:#fff;background:radial-gradient(700px 450px at 100% 0,rgba(36,87,214,.5),transparent 65%),var(--navy-d)}
+.tabs{display:inline-flex;gap:6px;padding:6px;margin-bottom:40px;border-radius:60px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
+.tabs button{padding:13px 28px;border:0;border-radius:50px;background:transparent;color:#cfdaf4;font-weight:600;cursor:pointer;transition:background .3s,color .3s}
+.tabs button[aria-selected="true"]{background:var(--gold);color:var(--navy-d)}
+[role=tabpanel]{animation:rise .6s var(--ease)}
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.steps::before{content:"";position:absolute;left:8%;right:8%;top:30px;height:2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 8px,transparent 8px 16px)}
+.step{position:relative;padding-top:0}
+.step h3{display:grid;place-items:center;width:62px;height:62px;margin:0 0 22px;border-radius:50%;background:var(--gold);color:var(--navy-d);font:800 .82rem var(--serif);text-align:center;line-height:1.1;box-shadow:0 0 0 8px var(--navy-d),0 0 0 10px rgba(240,180,41,.4)}
+.step p{padding:22px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#d6e0f6;font-size:.95rem;transition:transform .35s var(--ease),background .3s}
+.step:hover p{transform:translateY(-6px);background:rgba(255,255,255,.13)}
+.strands{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.strand{position:relative;overflow:hidden;min-height:300px;padding:30px 26px;border-radius:26px;background:linear-gradient(165deg,rgba(255,255,255,.12),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.16);transition:transform .45s var(--ease),background .35s,color .35s}
+.strand h3{font:800 3rem/1 var(--serif);color:var(--gold);margin-bottom:18px;transition:color .3s}
+.strand p{color:#d6e0f6;font-size:.95rem;transition:color .3s}
+.strand::after{content:"↗";position:absolute;right:22px;top:22px;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.3);transition:.35s var(--ease)}
+.strand:hover{transform:translateY(-10px);background:var(--gold)}
+.strand:hover h3,.strand:hover p{color:var(--navy-d)}
+.strand:hover::after{background:var(--navy-d);color:#fff;transform:rotate(45deg)}
+.shs-note{margin-top:46px;padding:20px 26px;border-radius:18px;background:rgba(255,255,255,.07);color:#d6e0f6;font-size:.92rem;border-left:4px solid var(--gold)}
+
+/* gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:190px;gap:16px}
+.gallery-item{position:relative;overflow:hidden;padding:0;border:0;border-radius:24px;background:#cfd8ea;cursor:zoom-in}
+.gallery-item:nth-child(1){grid-column:span 3;grid-row:span 2}
+.gallery-item:nth-child(2){grid-column:span 3}
+.gallery-item:nth-child(3){grid-column:span 2}
+.gallery-item:nth-child(4){grid-column:span 1}
+.gallery-item:nth-child(5){grid-column:span 6;grid-row:span 1}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.gallery-item:hover img{transform:scale(1.09)}
+.gallery-item span{position:absolute;left:14px;bottom:14px;padding:9px 18px;border-radius:50px;background:rgba(255,255,255,.95);color:var(--navy);font-weight:700;font-size:.9rem;transition:background .3s,transform .4s var(--ease)}
+.gallery-item:hover span{background:var(--gold);transform:translateY(-4px)}
+.gallery-note{margin-top:22px;color:var(--muted);font-size:.85rem}
+
+/* news editorial */
+.news-grid{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:auto auto;gap:22px}
+.news-card{display:flex;overflow:hidden;border:1px solid var(--line);border-radius:26px;background:#fff;transition:transform .4s var(--ease),box-shadow .4s}
+.news-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.news-card .thumb{flex:0 0 40%;overflow:hidden}
+.news-card img{width:100%;height:100%;min-height:200px;object-fit:cover;background:#cfd8ea;transition:transform .9s var(--ease)}
+.news-card:hover img{transform:scale(1.08)}
+.news-body{display:flex;flex-direction:column;justify-content:center;padding:26px 28px}
+.news-tag{align-self:flex-start;margin-bottom:12px;padding:4px 14px;border-radius:50px;background:#e6edfc;color:var(--blue);font-size:.7rem;font-weight:700;letter-spacing:.1em}
+.news-card h3{font:800 1.3rem var(--serif);color:var(--navy);margin-bottom:8px}
+.news-card p{color:var(--muted);font-size:.93rem;margin-bottom:16px}
+.news-card:first-child{grid-row:span 2;flex-direction:column}
+.news-card:first-child .thumb{flex:none;height:340px}
+.news-card:first-child h3{font-size:1.8rem}
+.news-card:first-child .news-body{padding:32px}
+.center-btn{text-align:center;margin-top:46px}
+
+/* facebook cta */
+.facebook-section{padding:0 0 110px}
+.facebook-inner{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:36px;padding:64px 60px;border-radius:34px;color:#fff;background:radial-gradient(500px 300px at 90% 0,rgba(240,180,41,.4),transparent 65%),linear-gradient(135deg,var(--navy),#17408f)}
+.facebook-inner::after{content:"f";position:absolute;right:230px;bottom:-60px;font:800 17rem/1 var(--serif);color:rgba(255,255,255,.06)}
+.facebook-inner>*{position:relative;z-index:1}
+.facebook-inner h2{font:800 clamp(2rem,3.4vw,3rem)/1.05 var(--serif);margin-bottom:12px}
+.facebook-inner p{max-width:56ch;color:#d3def5}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px}
+.contact-card{display:flex;flex-direction:column;align-items:flex-start;padding:38px 34px;border-radius:26px;background:#fff;border:1px solid var(--line);transition:transform .4s var(--ease),box-shadow .4s}
+.contact-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.contact-card:first-child{background:var(--navy);border-color:var(--navy);color:#fff}
+.contact-card:first-child h3{color:#fff}.contact-card:first-child p{color:#d3def5}
+.contact-card .quick-icon{margin-bottom:22px;background:var(--gold)}
+.contact-card h3{font:800 1.4rem var(--serif);color:var(--navy);margin-bottom:10px}
+.contact-card p{color:var(--muted);font-size:.97rem}
+.contact-card .link{margin-top:auto;padding-top:22px}
+
+/* footer */
+.footer{padding:80px 0 26px;background:var(--navy-d);color:#b7c4e0}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:60px;padding-bottom:46px}
+.footer h3{color:var(--gold);font:800 1.15rem var(--serif);margin-bottom:18px}
+.footer p,.footer li{font-size:.95rem}
+.footer ul{list-style:none}.footer li{margin-bottom:11px}
+.footer li a{transition:color .2s,padding .3s var(--ease)}
+.footer li a:hover{color:var(--gold);padding-left:8px}
+.footer-brand{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.footer-brand img{width:58px;height:58px;object-fit:contain}
+.footer-brand strong{color:#fff;font:800 1.08rem/1.25 var(--serif)}
+.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:.82rem}
+.footer-bottom a:hover{color:var(--gold)}
+.back-top{position:fixed;z-index:80;right:22px;bottom:22px;display:grid;place-items:center;width:50px;height:50px;border:0;border-radius:50%;background:var(--gold);color:var(--navy-d);font-size:1.3rem;font-weight:700;cursor:pointer;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(12px);transition:.3s var(--ease)}
+.back-top.visible{opacity:1;visibility:visible;transform:none}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.show{opacity:1;transform:none}
+.bcard.reveal.show,.quick-card.reveal.show,.strand.reveal.show,.news-card.reveal.show,.contact-card.reveal.show{transition:opacity .8s var(--ease),transform .45s var(--ease),background .35s,box-shadow .4s}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;padding:25px;background:rgba(3,9,24,.95);backdrop-filter:blur(8px)}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(100%,1050px);max-height:84vh;object-fit:contain;border-radius:14px}
+.lb-btn{position:absolute;display:grid;place-items:center;width:50px;height:50px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:1.5rem;cursor:pointer;transition:background .2s,color .2s}
+.lb-btn:hover{background:var(--gold);color:var(--navy-d)}
+.lightbox-close{top:20px;right:24px}.lb-prev{left:22px;top:50%}.lb-next{right:22px;top:50%}
+[hidden]{display:none!important}
+
+@media (max-width:1100px){
+  .menu-toggle{display:block}
+  .nav-links{position:absolute;top:100%;left:20px;right:20px;display:none;flex-direction:column;align-items:stretch;gap:2px;padding:12px;border-radius:24px;box-shadow:var(--shadow)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 18px}
+  .hero-grid{grid-template-columns:1fr;gap:40px;padding:70px 0 120px}
+  .collage{height:440px;max-width:560px}
+  .quick-grid{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr;gap:56px}
+  .about-photo{max-width:560px}
+  .bento{grid-template-columns:1fr 1fr}
+  .steps,.strands{grid-template-columns:1fr 1fr}.steps::before{display:none}
+  .head{flex-direction:column;align-items:flex-start;gap:16px}
+  .news-grid{grid-template-columns:1fr}.news-card:first-child{grid-row:auto}
+  .contact-grid{grid-template-columns:1fr 1fr}.contact-card:first-child{grid-column:1/-1}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:700px){
+  .section{padding:72px 0}
+  .container{width:min(1220px,calc(100% - 36px))}
+  .topbar-inner{justify-content:center}.topbar-inner span{display:none}
+  .navbar{min-height:72px}.brand img{width:44px;height:44px}.brand strong{font-size:.84rem}.brand span{font-size:.74rem}
+  .hero-actions{flex-direction:column}.hero-actions .btn{width:100%}
+  .collage{height:360px}.collage .seal{left:0;font-size:.85rem}
+  .marquee{margin-top:-28px}.marquee span{font-size:1.05rem;padding:13px 22px}
+  .quick-grid{grid-template-columns:1fr}
+  .about-photo{height:420px}
+  .about-points{grid-template-columns:1fr}
+  .bento,.steps,.strands{grid-template-columns:1fr}
+  .bcard{min-height:300px}
+  .bcard.enroll{flex-direction:column;align-items:flex-start;gap:16px}
+  .tabs{display:flex}.tabs button{flex:1;padding:12px 8px;font-size:.88rem}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:10px}
+  .gallery-item:nth-child(n){grid-column:span 1;grid-row:span 1}
+  .gallery-item:nth-child(1),.gallery-item:nth-child(5){grid-column:span 2}
+  .news-card{flex-direction:column}.news-card .thumb{flex:none;height:200px}.news-card:first-child .thumb{height:220px}
+  .facebook-inner{flex-direction:column;align-items:flex-start;padding:44px 28px}
+  .facebook-inner::after{right:-20px}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .lb-prev{left:10px}.lb-next{right:10px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ===== v5 overrides ===== */
+.slides img{opacity:1!important;transform:none!important;transition:none!important;object-position:center 45%}
+.slides::after{background:linear-gradient(100deg,rgba(5,15,43,.9),rgba(10,29,74,.55) 55%,rgba(10,29,74,.15)),linear-gradient(0deg,rgba(5,15,43,.6),transparent 45%)}
+
+.about-photo>img{inset:0;width:100%;height:100%}
+.about-photo .photo-caption{bottom:22px}
+.about-photo{height:520px}
+
+.hero{display:flex;align-items:center;min-height:max(680px,calc(100vh - 124px));background:var(--navy-d)}
+.hero::before{display:none}
+.slides{position:absolute;inset:0}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 1.6s ease,transform 7s ease}
+.slides img.on{opacity:1;transform:scale(1.14)}
+.slides::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(5,15,43,.95),rgba(10,29,74,.72) 55%,rgba(10,29,74,.3)),linear-gradient(0deg,rgba(5,15,43,.75),transparent 45%)}
+.hero-wrap{position:relative;z-index:2;padding-top:100px;padding-bottom:170px}
+.hero-wrap .hero-in{max-width:780px}
+.hero h1{font-size:clamp(3.2rem,7.4vw,6.6rem)}
+.dots{position:absolute;z-index:3;right:max(24px,calc((100% - 1220px)/2));bottom:112px;display:flex;gap:10px}
+.dots button{width:34px;height:5px;border:0;border-radius:5px;background:rgba(255,255,255,.35);cursor:pointer;transition:width .4s,background .3s}
+.dots button.on{width:60px;background:var(--gold)}
+
+.rail-ctl{display:flex;justify-content:flex-end;gap:10px;margin:-20px 0 18px}
+.arrow{display:grid;place-items:center;width:54px;height:54px;border:1.5px solid var(--navy);border-radius:50%;background:transparent;color:var(--navy);font-size:1.6rem;line-height:1;cursor:pointer;transition:background .25s,color .25s,transform .3s var(--ease)}
+.arrow:hover{background:var(--navy);color:#fff;transform:scale(1.08)}
+.rail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 4px 34px;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rail.drag{scroll-snap-type:none;cursor:grabbing}
+.rail>*{scroll-snap-align:start}
+.rail img{pointer-events:none;-webkit-user-drag:none}
+.rail .bcard{flex:0 0 min(360px,84%);min-height:420px}
+.rail .bcard.enroll{grid-column:auto;flex-direction:column;align-items:flex-start;gap:0;background:var(--gold);border-color:var(--gold)}
+.rail .bcard.enroll .program-code{margin:0 0 auto;background:var(--navy);color:var(--gold)}
+.rail .bcard.enroll h3{margin:28px 0 10px;color:var(--navy-d)}
+.rail .bcard.enroll p{margin:0 0 18px;color:#4a3a05}
+.rail .bcard.enroll .link{color:var(--navy-d);white-space:normal}
+.rail .bcard.enroll:hover{background:var(--navy-d)}
+.rail .bcard.enroll:hover h3{color:#fff}.rail .bcard.enroll:hover p{color:#c9d5f0}.rail .bcard.enroll:hover .link{color:var(--gold)}
+.rail .bcard.enroll:hover .program-code{background:var(--gold);color:var(--navy-d)}
+
+.gallery-grid.rail{display:flex;grid-template-columns:none;grid-auto-rows:auto;align-items:flex-start}
+.gallery-grid.rail .gallery-item{flex:0 0 min(440px,80%);width:auto;height:480px;grid-column:auto;grid-row:auto}
+.gallery-grid.rail .gallery-item:nth-child(even){margin-top:46px;height:430px}
+.gallery-grid.rail .gallery-item:nth-child(n){grid-column:auto;grid-row:auto}
+
+@media (max-width:700px){
+  .hero-wrap{padding-bottom:130px}
+  .dots{bottom:96px}
+  .rail-ctl{margin-top:0;justify-content:flex-start}
+  .gallery-grid.rail .gallery-item{height:380px}
+  .gallery-grid.rail .gallery-item:nth-child(even){margin-top:30px;height:340px}
+  .gallery-grid.rail .gallery-item:nth-child(n){grid-column:auto}
+}
+</style>
+<noscript><style>[role=tabpanel][hidden]{display:block!important}.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<!-- OFFICIAL FACEBOOK PAGE -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>Lyceum of Southern Luzon, Inc. · Balayan, Batangas</span>
+    <a href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Visit our Facebook Page ↗</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container navbar">
+    <a class="brand" href="#home" aria-label="Homepage">
+      <img src="LOGO.png" alt="School logo" onerror="this.style.display='none'">
+      <div><strong>LYCEUM OF SOUTHERN LUZON, INC.</strong><span>Creating Life's Champions</span></div>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">College Programs</a></li>
+        <li><a href="#senior-high">Senior High</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#news">Announcements</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="nav-cta" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Official Facebook ↗</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="slides" aria-hidden="true">
+    <img src="lsl.webp" alt="" onerror="this.style.display='none'">
+  </div>
+  <div class="container hero-wrap">
+    <div class="hero-in">
+      <div class="hero-badge">LYCEUM OF SOUTHERN LUZON, INC.</div>
+      <h1>Your Education.<em>Your Future.</em></h1>
+      <p class="hero-description">Welcome to Lyceum of Southern Luzon, Inc. in Balayan, Batangas. Explore our educational offerings, discover opportunities for learning, and connect with the school for official enrollment information.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#programs">Explore College Programs →</a>
+        <a class="btn btn-line" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Visit Official Facebook ↗</a>
+      </div>
+      <p class="hero-note">Creating Life's Champions</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>BSCRIM</span><span>BSCA</span><span>BSIS</span><span>BSMA</span><span>HUMSS</span><span>ABM</span><span>GAS</span><span>TVL</span><span>Creating Life's Champions</span>
+    <span>BSCRIM</span><span>BSCA</span><span>BSIS</span><span>BSMA</span><span>HUMSS</span><span>ABM</span><span>GAS</span><span>TVL</span><span>Creating Life's Champions</span>
+  </div>
+</div>
+
+<!-- QUICK LINKS -->
+<section class="quick-section">
+  <div class="container quick-grid">
+    <a class="quick-card reveal" href="#programs"><div class="quick-icon">▤</div><h3>College Programs</h3><p>Explore BSCRIM, BSCA, BSIS, and BSMA.</p></a>
+    <a class="quick-card reveal" href="#senior-high"><div class="quick-icon">🎓</div><h3>Senior High School</h3><p>Review available Senior High School offerings.</p></a>
+    <a class="quick-card reveal" href="#gallery"><div class="quick-icon">▧</div><h3>School Gallery</h3><p>View campus photos and school activities.</p></a>
+    <a class="quick-card reveal" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer"><div class="quick-icon">f</div><h3>Facebook Updates</h3><p>Visit the school's Facebook page for announcements.</p></a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-photo reveal">
+      <img src="lsl.webp" alt="Lyceum of Southern Luzon campus" loading="lazy" onerror="this.style.display='none'">
+      <div class="photo-caption"><span>LYCEUM OF SOUTHERN LUZON</span><h3>Creating Life's Champions</h3></div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="tag">About Our School</span>
+      <h2 class="title">Learn, Grow, and Prepare for the Future</h2>
+      <p>Lyceum of Southern Luzon, Inc. is an educational institution located in Barangay Lanatan, Balayan, Batangas.</p>
+      <p>This website provides an overview of the programs supplied for this page, a photo gallery, and links to the school's official Facebook page for announcements and further information.</p>
+      <div class="about-points">
+        <div class="about-point"><span>✓</span> Educational opportunities</div>
+        <div class="about-point"><span>✓</span> College program information</div>
+        <div class="about-point"><span>✓</span> Senior High School information</div>
+        <div class="about-point"><span>✓</span> School announcements</div>
+      </div>
+      <a class="btn btn-blue" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Learn More on Facebook ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- COLLEGE PROGRAMS -->
+<section class="section programs" id="programs">
+  <div class="container">
+    <div class="head reveal">
+      <div><span class="tag">Higher Education</span><h2 class="title">College Programs</h2></div>
+      <p class="desc">Explore the four college program codes provided for Lyceum of Southern Luzon, Inc. Contact the school through its official Facebook page to confirm complete program names, availability, admission requirements, and schedules.</p>
+    </div>
+
+    <div class="rail-ctl"><button class="arrow" type="button" data-rail="progRail" data-dir="-1" aria-label="Previous">‹</button><button class="arrow" type="button" data-rail="progRail" data-dir="1" aria-label="Next">›</button></div><div class="rail" id="progRail">
+      <article class="bcard" data-code="BSCRIM">
+        <div class="program-code">BSCRIM</div>
+        <h3>BSCRIM</h3>
+        <p>College program listed under the BSCRIM code. Contact the school for the official program description, curriculum, and enrollment details.</p>
+        <a class="link" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Ask about BSCRIM →</a>
+      </article>
+      <article class="bcard" data-code="BSCA">
+        <div class="program-code">BSCA</div>
+        <h3>BSCA</h3>
+        <p>College program listed under the BSCA code. Confirm the official full program name and current availability directly with the school.</p>
+        <a class="link" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Ask about BSCA →</a>
+      </article>
+      <article class="bcard" data-code="BSIS">
+        <div class="program-code">BSIS</div>
+        <h3>BSIS</h3>
+        <p>College program listed under the BSIS code. Contact the school to verify its official full name, subjects, and enrollment availability.</p>
+        <a class="link" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Ask about BSIS →</a>
+      </article>
+      <article class="bcard" data-code="BSMA">
+        <div class="program-code">BSMA</div>
+        <h3>BSMA</h3>
+        <p>College program listed under the BSMA code. Request confirmation of its complete official name and program details from the school.</p>
+        <a class="link" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Ask about BSMA →</a>
+      </article>
+      <article class="bcard enroll">
+        <div class="program-code">SHS</div>
+        <div>
+          <h3>Enrollment Information</h3>
+          <p>Ask about current program availability, application schedules, required documents, and the enrollment process.</p>
+        </div>
+        <a class="link" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Contact the School →</a>
+      </article>
+    </div>
+
+    <p class="program-note reveal">Important: The four college codes above are included as requested. Their complete official names and current availability should be confirmed with the school before publishing final program descriptions.</p>
+  </div>
+</section>
+
+<!-- SECONDARY EDUCATION -->
+<section class="section dark" id="senior-high">
+  <div class="container">
+    <div class="head reveal">
+      <div><span class="tag">Secondary Education</span><h2 class="title">Junior High School &amp; Senior High School</h2></div>
+      <p class="desc">Lyceum of Southern Luzon, Inc. provides information for students exploring junior and senior high school education. Contact the school to confirm current enrollment availability and offerings.</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist" aria-label="Choose level">
+      <button role="tab" id="tab-jhs" aria-selected="true" aria-controls="panel-jhs" data-tab="jhs">Junior High School</button>
+      <button role="tab" id="tab-shs" aria-selected="false" aria-controls="panel-shs" data-tab="shs">Senior High School</button>
+    </div>
+
+    <div role="tabpanel" id="panel-jhs" aria-labelledby="tab-jhs">
+      <div class="steps">
+        <div class="step"><h3>Grade 7</h3><p>Begin your secondary education with foundational academic subjects, learning activities, and personal development.</p></div>
+        <div class="step"><h3>Grade 8</h3><p>Strengthen your knowledge and skills through continued academic learning and student activities.</p></div>
+        <div class="step"><h3>Grade 9</h3><p>Develop critical thinking, practical skills, and readiness for the next stage of education.</p></div>
+        <div class="step"><h3>Grade 10</h3><p>Complete junior high school and prepare for senior high school pathways and future goals.</p></div>
+      </div>
+    </div>
+
+    <div role="tabpanel" id="panel-shs" aria-labelledby="tab-shs" hidden>
+      <div class="strands">
+        <article class="strand"><h3>HUMSS</h3><p>Humanities and Social Sciences. Explore communication, society, culture, history, and human behavior.</p></article>
+        <article class="strand"><h3>ABM</h3><p>Accountancy, Business, and Management. Learn about business operations, accounting, entrepreneurship, and management.</p></article>
+        <article class="strand"><h3>GAS</h3><p>General Academic Strand. Build a broad academic foundation for different college and career pathways.</p></article>
+        <article class="strand"><h3>TVL</h3><p>Technical-Vocational-Livelihood. Develop practical and career-oriented skills through applicable technical and vocational specializations.</p></article>
+      </div>
+    </div>
+
+    <p class="shs-note">Please contact the school to confirm which grade levels, strands, and specializations are available for the current school year.</p>
+  </div>
+</section>
+
+<!-- SCHOOL GALLERY -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="head reveal">
+      <div><span class="tag">Campus and Activities</span><h2 class="title">School Gallery</h2></div>
+      <p class="desc">A visual section for campus photos, student activities, school events, and other school-related moments.</p>
+    </div>
+
+    <div class="rail-ctl"><button class="arrow" type="button" data-rail="galRail" data-dir="-1" aria-label="Previous">‹</button><button class="arrow" type="button" data-rail="galRail" data-dir="1" aria-label="Next">›</button></div><div class="gallery-grid rail" id="galRail">
+      <button class="gallery-item" type="button" data-full="lsl.webp" aria-label="View campus photo"><img src="lsl.webp" alt="School campus" loading="lazy"><span>School Campus</span></button>
+      <button class="gallery-item" type="button" data-full="pic.webp" aria-label="View school activity photo"><img src="pic.webp" alt="School activity" loading="lazy"><span>School Activities</span></button>
+      <button class="gallery-item" type="button" data-full="event.webp" aria-label="View student event photo"><img src="event.webp" alt="Student event" loading="lazy"><span>Student Events</span></button>
+      <button class="gallery-item" type="button" data-full="ors.webp" aria-label="View school program photo"><img src="ors.webp" alt="School program" loading="lazy"><span>School Programs</span></button>
+      <button class="gallery-item" type="button" data-full="life.webp" aria-label="View student life photo"><img src="life.webp" alt="Student life" loading="lazy"><span>Student Life</span></button>
+    </div>
+
+    <p class="gallery-note">Replace these image files with actual school photos obtained from the official page with permission where required. These filenames are placeholders, not verified Facebook photos.</p>
+  </div>
+</section>
+
+<!-- NEWS AND ANNOUNCEMENTS -->
+<section class="section programs" id="news">
+  <div class="container">
+    <div class="head reveal">
+      <div><span class="tag">Stay Updated</span><h2 class="title">News &amp; Announcements</h2></div>
+      <p class="desc">For authentic school announcements, current event details, enrollment dates, and official notices, visit the school's Facebook page.</p>
+    </div>
+
+    <div class="news-grid">
+      <article class="news-card reveal">
+        <div class="thumb"><img src="ko.webp" alt="Enrollment information" loading="lazy"></div>
+        <div class="news-body">
+          <span class="news-tag">ENROLLMENT</span>
+          <h3>Enrollment Announcements</h3>
+          <p>Check the official school page for the current enrollment schedule, application process, and required documents.</p>
+          <a class="link" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">View Official Updates ↗</a>
+        </div>
+      </article>
+      <article class="news-card reveal">
+        <div class="thumb"><img src="amn.webp" alt="School events" loading="lazy"></div>
+        <div class="news-body">
+          <span class="news-tag">SCHOOL EVENTS</span>
+          <h3>Activities and Events</h3>
+          <p>Visit the official Facebook page for published school activities, event photos, and announcements.</p>
+          <a class="link" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">View School Activities ↗</a>
+        </div>
+      </article>
+      <article class="news-card reveal">
+        <div class="thumb"><img src="annno.webp" alt="School announcements" loading="lazy"></div>
+        <div class="news-body">
+          <span class="news-tag">OFFICIAL NOTICES</span>
+          <h3>School Announcements</h3>
+          <p>Find official notices and updates directly from the school's Facebook page. Check each post for its publication date and details.</p>
+          <a class="link" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Read Official Announcements ↗</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="center-btn">
+      <a class="btn btn-blue" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Visit the Official Facebook Page ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- FACEBOOK LINK -->
+<section class="facebook-section">
+  <div class="container">
+    <div class="facebook-inner reveal">
+      <div>
+        <h2>Connect With Lyceum</h2>
+        <p>Looking for the latest enrollment details, school activities, official announcements, and other updates? Visit the Lyceum of Southern Luzon, Balayan Facebook page.</p>
+      </div>
+      <a class="btn btn-gold" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Open Facebook Page ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact" style="padding-top:0">
+  <div class="container">
+    <div class="head reveal">
+      <div><span class="tag">Get in Touch</span><h2 class="title">Contact the School</h2></div>
+      <p class="desc">For verified contact information, college program descriptions, current enrollment requirements, and office schedules, contact the school directly.</p>
+    </div>
+
+    <div class="contact-grid">
+      <article class="contact-card reveal">
+        <div class="quick-icon">⌖</div>
+        <h3>School Location</h3>
+        <p>Barangay Lanatan,<br>Balayan, Batangas, Philippines</p>
+      </article>
+      <article class="contact-card reveal">
+        <div class="quick-icon">f</div>
+        <h3>Official Facebook</h3>
+        <p>Visit the school's Facebook page to find published announcements and contact information.</p>
+        <a class="link" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Visit Facebook ↗</a>
+      </article>
+      <article class="contact-card reveal" id="admissions">
+        <div class="quick-icon">✉</div>
+        <h3>Enrollment Inquiries</h3>
+        <p>Ask the school about available programs, admission procedures, required documents, and enrollment dates.</p>
+        <a class="link" href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Send an Inquiry ↗</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-brand" href="#home"><img src="LOGO.png" alt="School logo" onerror="this.style.display='none'"><strong>LYCEUM OF<br>SOUTHERN LUZON, INC.</strong></a>
+        <p>Creating Life's Champions.<br>Lyceum of Southern Luzon, Inc.<br>Balayan, Batangas, Philippines.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#about">About the School</a></li>
+          <li><a href="#programs">College Programs</a></li>
+          <li><a href="#senior-high">Senior High School</a></li>
+          <li><a href="#gallery">School Gallery</a></li>
+          <li><a href="#news">Announcements</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Official Links</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Official Facebook Page ↗</a></li>
+          <li><a href="#contact">Contact the School</a></li>
+          <li><a href="#admissions">Enrollment Information</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Lyceum of Southern Luzon, Inc.</span>
+      <a href="https://www.facebook.com/LyceumOfSouthernLuzonBalayan/" target="_blank" rel="noopener noreferrer">Facebook · Creating Life's Champions ↗</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" type="button" aria-label="Back to top">↑</button>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="School photo viewer">
+  <button class="lb-btn lightbox-close" id="lightboxClose" type="button" aria-label="Close photo viewer">&times;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous photo">‹</button>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next photo">›</button>
+  <img id="lightboxImage" src="" alt="Expanded school photo">
+</div>
+
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// mobile nav
+const menuToggle = $("menuToggle"), navLinks = $("navLinks");
+function closeMenu(){
+  navLinks.classList.remove("open");
+  menuToggle.textContent = "☰";
+  menuToggle.setAttribute("aria-expanded","false");
+  menuToggle.setAttribute("aria-label","Open navigation");
+}
+menuToggle.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuToggle.textContent = open ? "✕" : "☰";
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+});
+navLinks.querySelectorAll("a").forEach(l => l.addEventListener("click", closeMenu));
+
+// scroll: header, back-to-top, progress
+const header = $("header"), backTop = $("backTop"), progress = $("progress");
+function onScroll(){
+  const y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+  header.classList.toggle("scrolled", y > 25);
+  backTop.classList.toggle("visible", y > 400);
+  progress.style.width = (max > 0 ? y / max * 100 : 0) + "%";
+}
+addEventListener("scroll", onScroll, {passive:true});
+onScroll();
+backTop.addEventListener("click", () => scrollTo({top:0, behavior: reduce ? "auto" : "smooth"}));
+$("year").textContent = new Date().getFullYear();
+
+// reveal (with small stagger inside grids)
+const reveals = document.querySelectorAll(".reveal");
+reveals.forEach(el => {
+  const sibs = [...el.parentElement.children].filter(c => c.classList.contains("reveal"));
+  el.style.transitionDelay = Math.min(sibs.indexOf(el), 4) * 90 + "ms";
+});
+if ("IntersectionObserver" in window && !reduce){
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add("show"); io.unobserve(e.target); }
+  }), {threshold:.12});
+  reveals.forEach(el => io.observe(el));
+} else reveals.forEach(el => el.classList.add("show"));
+
+// active nav
+const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+const secs = links.map(l => document.querySelector(l.getAttribute("href"))).filter(Boolean);
+if ("IntersectionObserver" in window){
+  const so = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + e.target.id));
+  }), {rootMargin:"-25% 0px -65% 0px"});
+  secs.forEach(s => so.observe(s));
+}
+
+// Junior / Senior High tabs
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+tabs.forEach(tab => tab.addEventListener("click", () => {
+  tabs.forEach(t => {
+    const on = t === tab;
+    t.setAttribute("aria-selected", String(on));
+    $("panel-" + t.dataset.tab).hidden = !on;
+  });
+}));
+
+// lightbox with previous / next
+const lightbox = $("lightbox"), lbImg = $("lightboxImage");
+const items = [...document.querySelectorAll(".gallery-item")];
+let current = 0;
+function show(i){
+  current = (i + items.length) % items.length;
+  const it = items[current], img = it.querySelector("img");
+  lbImg.src = it.dataset.full;
+  lbImg.alt = img ? img.alt : "";
+}
+function openLb(i){ show(i); lightbox.classList.add("open"); $("lightboxClose").focus(); }
+function closeLightbox(){
+  if (!lightbox.classList.contains("open")) return;
+  lightbox.classList.remove("open");
+  lbImg.src = "";
+  items[current].focus();
+}
+items.forEach((it, i) => it.addEventListener("click", () => openLb(i)));
+$("lightboxClose").addEventListener("click", closeLightbox);
+$("lbPrev").addEventListener("click", () => show(current - 1));
+$("lbNext").addEventListener("click", () => show(current + 1));
+lightbox.addEventListener("click", e => { if (e.target === lightbox) closeLightbox(); });
+addEventListener("keydown", e => {
+  if (e.key === "Escape"){ closeMenu(); closeLightbox(); }
+  if (lightbox.classList.contains("open")){
+    if (e.key === "ArrowLeft") show(current - 1);
+    if (e.key === "ArrowRight") show(current + 1);
+  }
+});
+
+
+// carousels: arrows + mouse drag
+document.querySelectorAll("[data-rail]").forEach(b=>b.addEventListener("click",()=>{
+  const r=$(b.dataset.rail);
+  r.scrollBy({left:Number(b.dataset.dir)*r.clientWidth*.8,behavior:reduce?"auto":"smooth"});
+}));
+document.querySelectorAll(".rail").forEach(r=>{
+  let down=false,moved=false,x=0,s=0;
+  r.addEventListener("pointerdown",e=>{if(e.pointerType!=="mouse")return;down=true;moved=false;x=e.clientX;s=r.scrollLeft});
+  r.addEventListener("pointermove",e=>{if(!down)return;const dx=e.clientX-x;if(Math.abs(dx)>6){moved=true;r.classList.add("drag")}r.scrollLeft=s-dx});
+  addEventListener("pointerup",()=>{down=false;r.classList.remove("drag")});
+  r.addEventListener("click",e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+});
+</script>
+</body>
+</html>
